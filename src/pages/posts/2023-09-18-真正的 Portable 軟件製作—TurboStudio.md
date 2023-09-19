@@ -7,7 +7,7 @@ cover:
     url: 'https://github.com/tqgx/tqgx/blob/main/TQGX/T1.png?raw=true'
     square: 'https://github.com/tqgx/tqgx/blob/main/TQGX/T1.png?raw=true'
     alt: 'cover'
-tags: ["2023", "軟件"] 
+tags: ["SOFTWARE", "2023", "無聊"] 
 theme: 'light'
 featured: true
 ---
