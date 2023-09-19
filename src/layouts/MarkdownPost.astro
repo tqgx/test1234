@@ -54,6 +54,7 @@ const dateFormated = formatDate(pubDate);
           </div>
           <slot />
           <div class="component">
+            <div id="disqus_thread"></div>
             <div class="component-content">
               <div class="article-copyright"> 
                 <img class="copyright-img" src="https://github.com/tqgx/tqgx/blob/main/TQGX/copyright.png?raw=true" alt="我的圖片" width="160" style="display: block; margin: 0 auto;">
@@ -66,6 +67,15 @@ const dateFormated = formatDate(pubDate);
       </section>
     </main>
     <Footer />
+    <script>
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://tqgx.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      
     <script is:inline>
       var script = document.createElement("script");
       script.src = "/static/js/initPost.js";
