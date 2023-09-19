@@ -5,7 +5,7 @@ const allPosts = await Astro.glob("./posts/*.md");
 const tags = ["2023", "無聊", "軟件", "系統"];
 const posts = [];
 
-tags.forEach((tag) => {
+tags.forEach((tag) => { 
   let filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
   posts.push(filteredPosts);
 });
