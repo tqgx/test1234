@@ -7,16 +7,13 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 ---
 
 <BaseLayout>
-  <section class="everydayfeed">
-    <div class="section-content" 
-      <h2 class="section-head"></h2>
+    <div class="section-content" style="width: 98%;">
       <ul role="list" class="section-tiles">
         {
           // tile-hero
           allPosts.slice(0, 9999).map((post) => {
             return (
-            <MoreTile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} />
-            
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
             );
           })
         }
