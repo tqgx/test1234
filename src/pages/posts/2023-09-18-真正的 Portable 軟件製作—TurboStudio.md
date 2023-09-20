@@ -7,7 +7,7 @@ cover:
     url: 'https://github.com/tqgx/tqgx/blob/main/TQGX/T1.png?raw=true'
     square: 'https://github.com/tqgx/tqgx/blob/main/TQGX/T1.png?raw=true'
     alt: 'cover'
-tags: ["SOFTWARE", "2023", "無聊"] 
+tags: ["SOFTWARE", "TQGX"] 
 theme: 'light'
 featured: true
 ---
@@ -16,7 +16,7 @@ featured: true
 ![|wide](https://github.com/tqgx/tqgx/blob/main/TQGX/T1.png?raw=true')
 
 
-基於上篇... [關於真正的 Portable 軟件原理](https://tqgx.github.io/2023/09/17/%E9%97%9C%E6%96%BC%E7%9C%9F%E6%AD%A3%E7%9A%84-Portable-%E8%BB%9F%E4%BB%B6%E5%8E%9F%E7%90%86/)
+基於上篇... [關於真正的 Portable 軟件原理](https://tqgx.github.io/posts/2023-09-18-%E7%9C%9F%E6%AD%A3%E7%9A%84%20Portable%20%E8%BB%9F%E4%BB%B6%E8%A3%BD%E4%BD%9C%E2%80%94TurboStudio/)
 我想大家可以很好分清楚便攜軟件的重要性了。當然，我自己也有偷懶一下，這篇文章將會教你如何真正做TurboStudio的軟件，~~從入門到入土~~
 
 - 本篇文章將會用TurboStudio 19.6.1208 版本作為教學，需要下載請到[OpenTools](https://github.com/tqgx/OpenTools/releases/tag/Database-All-Tools)
