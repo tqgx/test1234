@@ -7,8 +7,8 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
 ---
 
 <BaseLayout>
-    <div class="section-content" style="width: 98%;">
-      <ul role="list" class="section-tiles">
+<div class="section-content" style="width: 86%;">
+        <ul role="list" class="section-tiles">
         {
           // tile-hero
           allPosts.slice(0, 9999).map((post) => {
