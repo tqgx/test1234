@@ -32,6 +32,7 @@ featured: true
 ## 參數設定：
 
 這個步驟主要是將所有資料夾、註冊表，放在一個資料夾內，若沒做這個步驟，你的Portable軟件就相當於沒做到Settings→ 
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T4.png?raw=true)
 
 - 看到我輸入@APPDIR@\Data的地方，請跟著輸入
@@ -44,7 +45,7 @@ featured: true
 - 到Network→DNS，
 - 看到Hostname or IP Address，輸入：*
 - 看到Redlirect 輸入：0.0.0.0
-- 
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T5.png?raw=true)
 
 
@@ -76,20 +77,26 @@ __提醒：如果軟件要用網路，把上面的參數刪除即可__
 這個步驟是為了將資料夾和註冊表，不會跑到外面一定要做的事（如果你確保這些檔案都不會跑出來，可以全設隔離也沒關係）
 - 反正簡單說就是看到哪裡有資料夾，哪邊就設Write Copy、在下圖當中我設置都是常見的
 - 資料夾隔離：
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T8.png?raw=true)
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T9.png?raw=true)
 
 ### 隔離註冊表：
 - 註冊表全設即可 （原因很簡單，不要自己亂刪。到時候註冊表沒包在一個資料夾，會跑出去）
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T10.png?raw=true)
 
 ### 選擇軟件的開啟路徑（選擇.exe）
 - 這個地方是為了讓你選擇軟件的正確開啟，譬如我們選擇.lnk，這就是路徑檔案，選擇.exe才是正確的....
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T10.png?raw=true)
 
 
 # Build 製作完成！
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T12.png?raw=true)
+
 ![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/T13.png?raw=true)
 
 - 享受勝利的果實吧！
