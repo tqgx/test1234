@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /posts
+Allow: /tags
+Allow: /sitemap.xml
+
+# 禁止 Google 搜尋引擎 bot 訪問以下目錄
+Disallow: /admin
+Disallow: /drafts
