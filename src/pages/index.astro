@@ -11,6 +11,7 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontma
     <div class="section-content">
       <h2 class="section-head">Latest News</h2>
       <ul role="list" class="section-tiles">
+        
         {
           // tile-hero
           allPosts.slice(0, 1).map((post) => {
