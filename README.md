@@ -10,12 +10,12 @@ https://tqgx.github.io/
   
 #### How New Post?
 - To  /src/pages/posts Create 0.md File
--  This must be completed in the following file format (Copy and paste)
 -  can delete all posts by default, no problem
 
 
  ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork4.png?raw=true)
-
+ 
+-  This must be completed in the following file format (Copy and paste)
 ```
 ---
 layout: '../../layouts/MarkdownPost.astro'
