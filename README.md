@@ -53,9 +53,11 @@ __Warning: Be sure to leave a blank line of text when inserting any image, other
 
 ## Change my Comments section?
 -  src\layouts\MarkdownPost.astro
- 
+- https://utteranc.es/
+- https://giscus.app/zh-CN
+- https://disqus.com/
+- Set up a Github repository for utteranc and giscus to open Discussions and Issues
+  
 - ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork5.png?raw=true)
-
  - ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork6.png?raw=true)
- 
  - ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork7.png?raw=true)
