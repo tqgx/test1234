@@ -1,6 +1,6 @@
 https://tqgx.github.io/
 
-# like the theme?  Fork it!
+# like the theme?  Template it!
 [How make?](https://tqgx.github.io/posts/2/)
 - Author：https://github.com/austin2035/astro-air-blog
 
