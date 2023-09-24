@@ -32,6 +32,18 @@ featured: true
 ---
 ```
 
+####  Image insertion format:
+```
+![|wide](https://github.com/tqgx/tqgx/blob/main/TQGX/cat.jpg?raw=true)
+![|big](https://github.com/tqgx/tqgx/blob/main/TQGX/cat.jpg?raw=true)
+![|inline](https://github.com/tqgx/tqgx/blob/main/TQGX/cat.jpg?raw=true)
+```
+- wide= Full screen
+- big= A big picture
+- inline= small picture
+
+__Warning: Be sure to leave a blank line of text when inserting any image, otherwise the image will look strange on the mobile device__ 
+![image](https://github.com/tqgx/tqgx/blob/main/TQGX/qqwe.png?raw=true)
 
 
 ## [How to Change?](https://tqgx.github.io/posts/2/)
