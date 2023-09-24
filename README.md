@@ -5,13 +5,33 @@ https://tqgx.github.io/
 ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork2.png?raw=true)
 ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork3.png?raw=true)
 
+- After the above is completed, wait two to three minutes, and then search the URL column:
+- yourname.github.io  (Replace yourname with your Github ID)
+  
 ### [How make?](https://tqgx.github.io/posts/2/)
 - Author：https://github.com/austin2035/astro-air-blog
 
 
-I am very happy to set up this blog, I intend to put a lot of my own things, but also want to bring the original author did not have the beauty to add
- 很開心，我建立了這個博客，我打算放入好多屬於自己的東西，又想要將原本作者沒有的美感都加入進去
+#### How New Post?
+- To  /src/pages/posts Create 0.md File
+-  This must be completed in the following file format (Copy and paste)
 
 
+ ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork4.png?raw=true)
 
+```
+---
+layout: '../../layouts/MarkdownPost.astro'
+title: HOW'
+pubDate: 2023-09-20
+description: 'How'
+cover:
+    url: 'https://github.com/tqgx/tqgx/blob/main/TQGX/wind1.png?raw=true'
+    square: 'https://github.com/tqgx/tqgx/blob/main/TQGX/wind1.png?raw=tr'
+    alt: 'cover'
+tags: ["SOFTWARE", "TQGX"] 
+theme: 'light'
+featured: true
+---
+```
 
