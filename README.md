@@ -8,13 +8,10 @@ https://tqgx.github.io/
 - After the above is completed, wait two to three minutes, and then search the URL column:
 - yourname.github.io  (Replace yourname with your Github ID)
   
-### [How make?](https://tqgx.github.io/posts/2/)
-- Author：https://github.com/austin2035/astro-air-blog
-
-
 #### How New Post?
 - To  /src/pages/posts Create 0.md File
 -  This must be completed in the following file format (Copy and paste)
+-  can delete all posts by default, no problem
 
 
  ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork4.png?raw=true)
@@ -35,3 +32,7 @@ featured: true
 ---
 ```
 
+
+## [How to Change?](https://tqgx.github.io/posts/2/)
+- Author：https://github.com/austin2035/astro-air-blog
+- Everything see can see about me. to  be replaced directly
