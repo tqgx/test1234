@@ -46,7 +46,13 @@ __Warning: Be sure to leave a blank line of text when inserting any image, other
 ![image](https://github.com/tqgx/tqgx/blob/main/TQGX/qqwe.png?raw=true)
 
 
-## [How to Change?](https://tqgx.github.io/posts/2/)
+## [How to Change?] (https://tqgx.github.io/posts/2/)
 
 - Author：https://github.com/austin2035/astro-air-blog
 - Everything see can see about me. to  be replaced directly
+
+## Change my Comments section?
+-  src\layouts\MarkdownPost.astro
+ ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork5.png?raw=true)
+ ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork6.png?raw=true)
+ ![imgage](https://github.com/tqgx/tqgx/blob/main/TQGX/fork7.png?raw=true)
