@@ -2,6 +2,7 @@
 import Navigation from "./Navigation.astro";
 ---
 
+
 <header>
   <div style={{ background: "#333333", height: "40px", padding: "4px" }}>
     <button type="button" class="hamburger">
@@ -15,9 +16,41 @@ import Navigation from "./Navigation.astro";
       </div>
     </div>
   </div>
-</header>
-
-
-<header>
-  <Navigation />
-</header>
+  <style>
+    .sticky-header {
+      position: relative;
+      transition: top 0.3s ease-in-out; /* 添加過渡效果，使切換固定時更平滑 */
+    }
+    .navigation {
+      position: fixed;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.6); /* 設置背景顏色為透明化的白色，根據需要進行調整 */
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      z-index: 1; /* 將 z-index 設置為 1，以確保它在其他元素之上 */
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('.sticky-header');
+      var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+      if (scrollPosition > 0) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    });
+  </script>
+  <div class="sticky-header">
+    <div class="navigation">
+      <!-- 在這裡放置您的導航元素 -->
+      <Navigation />
+    </div>
+  </div>
+  
+  <!-- 在這裡添加一個空的區塊，以留出空間 -->
+  <div style="height: 40px;"></div>
+  
