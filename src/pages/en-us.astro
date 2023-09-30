@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/en-us-BaseLayout.astro";
+import Tile from "../layouts/Tile.astro";
+import MoreTile from "../layouts/MoreTile.astro";
+const allPosts = await Astro.glob("../pages/en-us/*.md");
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+---
+
+<BaseLayout>
+  <section class="everydayfeed">
+    <div class="section-content">
+      <h2 class="section-head">Latest News</h2>
+      <ul role="list" class="section-tiles">
+        
+        {
+          // tile-hero
+          allPosts.slice(0, 1).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="1" />
+            );
+          })
+        }
+
+        {
+          // tile-2up
+          allPosts.slice(1, 3).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="2" />
+            );
+          })
+        }
+
+        {
+          // tile-3up
+          allPosts.slice(3, 9).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
+            );
+          })
+        }
+            <div class="section-content">
+                <h2 class="section-head">ㅤ</h2>
+                
+                <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/AI3.png?raw=true" alt="Image of a cat" class="section-content">
+                <img src="https://github.com/tqgx/tqgx/blob/main/TQGX/Gentoo1.png?raw=true" alt="Image of a cat" class="section-content">
+                    <div class="view-archive-wrapper">
+        <a href="posts/16" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">View All</a>
+      </div>
+
+                <h2 class="section-head">ㅤ</h2>
+              <h2 class="section-head">More from TQGX</h2>
+      <ul role="list" class="section-tiles">
+
+        {
+          // tile-2up
+          allPosts.slice(9, 17).map((post) => {
+            return (
+              <MoreTile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} />
+            );
+          })
+        }
+
+      </ul>
+    </div>
+  </section>
+
+      <div class="view-archive-wrapper">
+        <a href="/en-us_archive" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">View Archive</a>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      var script = document.createElement("script");
+      script.src = "/static/js/animation.js";
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        console.log("lazyload.js loaded");
+        // when layout is loaded, load the images
+        initImage();
+      };
+    });
+  </script>
+</BaseLayout>

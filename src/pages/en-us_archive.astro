@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/en-us-BaseLayout.astro";
+import Tile from "../layouts/Tile.astro";
+import MoreTile from "../layouts/MoreTile.astro";
+const allPosts = await Astro.glob("../pages/en-us/*.md");
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+---
+
+<BaseLayout>
+  
+<div class="section-content" style="width: 82%;">
+        <ul role="list" class="section-tiles">
+        {
+          // tile-hero
+          allPosts.slice(0, 9999).map((post) => {
+            return (
+              <Tile title={post.frontmatter.title} href={post.url} date={post.frontmatter.pubDate} tags={post.frontmatter.tags} cover={post.frontmatter.cover.url} level="3" />
+            );
+          })
+        }
+      </ul>
+      <div class="view-archive-wrapper">
+        <a href="/en-us" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
+      </div>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", function () {
+      var script = document.createElement("script");
+      script.src = "/static/js/animation.js";
+      document.head.appendChild(script);
+
+      script.onload = function () {
+        console.log("lazyload.js loaded");
+        // when layout is loaded, load the images
+        initImage();
+      };
+    });
+  </script>
+</BaseLayout>

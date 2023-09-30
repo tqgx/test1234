@@ -1,0 +1,153 @@
+---
+import BaseHead from "../components/en-us-BaseHead.astro";
+import Header from "../components/en-us-Header.astro";
+import Footer from "../components/en-us-Footer.astro";
+
+import { formatDate } from "../utils";
+import { SITE_TITLE } from "../consts";
+const { frontmatter } = Astro.props;
+const type = frontmatter.tags[0];
+const { pubDate, title, description, featured } = frontmatter;
+const dateFormated = formatDate(pubDate);
+---
+
+<html lang="zh-CN" dir="ltr" class="js no-touch progressive-image no-reduced-motion progressive">
+  <head>
+    <BaseHead title={`${title} - ${SITE_TITLE}`} description={description} image={frontmatter.cover.square} />
+  </head>
+  <body class:list={["page-article", { "theme-dark": frontmatter.theme === "dark" }]}>
+    <Header />
+    <main id="main" class="main">
+      <section>
+        <article class="article">
+          <div class:list={[{ "featured-header": featured, "article-header": !featured }]}>
+            <div class="category component">
+              <div class="component-content">
+                <div class="category-eyebrow">
+                  <span class="category-eyebrow__category category_original">{type}</span>
+                  <span class="category-eyebrow__date">{dateFormated}</span>
+                </div>
+              </div>
+            </div>
+            <div class="pagetitle component">
+              <div class="component-content">
+                <h1 class="hero-headline">{title}</h1>
+              </div>
+            </div>
+            <div class:list={[{ "featured-subhead": featured, "article-subhead": !featured }, "component"]}>
+              <div class="component-content">{description}</div>
+            </div>
+
+            <div class:list={["tagssheet component"]}>
+              <div class="component-content">
+                {
+                  frontmatter.tags.map((tag) => {
+                    return (
+                      <a href={`/tags/${tag}`} class="tag">
+                        {tag}
+                      </a>
+                    );
+                  })
+                }
+                
+              </div>
+            </div>
+          </div>
+          <slot />
+          
+          <div class="component">
+            <div class="square-frame">
+              <div class="comment-container">
+                <div class="comment-title">
+                </div>
+                <div class="comment-content">
+
+                  <h1 style="text-align: center">留言板</h1>
+                  <hr>
+
+                  <div id="utteranc" style="float: left; width: 50%;">
+                    <h1 style="text-align: left">Utteranc</h1>
+
+                    <h1 style="text-align: left">&emsp;</h1>
+                    <h1 style="text-align: left">&emsp;</h1>
+
+
+                    <script
+                    
+                      src="https://utteranc.es/client.js"
+                      repo="tqgx/netlify-tqgx-blog-comments1"
+                      issue-term="title"
+                      theme="github-light"
+                      crossorigin="anonymous"
+                      async
+                    ></script>
+                  </div>
+                  <div id="giscus" style="float: right; width: 50%;">
+                    <h1 style="text-align: right">Giscus</h1>
+
+                    <script src="https://giscus.app/client.js"
+                        data-repo="tqgx/netlify-tqgx-blog-comments"
+                        data-repo-id="R_kgDOKXazvQ"
+                        data-category="Announcements"
+                        data-category-id="DIC_kwDOKXazvc4CZksu"
+                        data-mapping="title"
+                        data-strict="0"
+                        data-reactions-enabled="1"
+                        data-emit-metadata="1"
+                        data-input-position="bottom"
+                        data-theme="preferred_color_scheme"
+                        data-lang="zh-CN"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
+                  </div>
+                  <div id="disqus_thread" style="clear: both; width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+          <div class="component">
+            <div id="disqus_thread"></div>
+            <div class="component-content">
+              <div class="article-copyright"> 
+                <img class="copyright-img" src="https://github.com/tqgx/tqgx/blob/main/TQGX/copyright.png?raw=true" alt="我的圖片" width="160" style="display: block; margin: 0 auto;">
+                <div class="cccopyright" style="padding:10px;margin:auto;font-size:16px;width:auto;text-align:center;:2px solid"><p>感謝您的閱讀。歡迎分享TQGX部落格(tqgx.github.io)的文章，引用轉載請上註明網址並遵守：<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh_TW" target="_blank" rel="noopener noreferrer">創用CC-姓名標示-非商業性-禁止改作 4.0 國際</a>授權條款。如需商業使用請來信告之。
+
+              </div>
+            </div>
+          </div>
+          <section class="more-from-newsroom">
+            <div class="section-content">
+              
+           
+        
+              <ul role="list" class="section-tiles">
+        
+              </ul>
+              <div class="view-archive-wrapper">
+                <a href="/en-us" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">Back</a>
+              </div>
+            </div>
+          </section>
+        
+        </article>
+      </section>
+    </main>
+    <Footer />
+    <script>
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://tqgx.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      
+    <script is:inline>
+      var script = document.createElement("script");
+      script.src = "/static/js/initPost.js";
+      document.head.appendChild(script);
+    </script>
+  </body>
+</html>
