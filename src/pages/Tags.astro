@@ -4,7 +4,7 @@ import ArchivePostList from "../layouts/ArchivePostList.astro";
 import SearchBar from '../layouts/SearchBar.astro';
 
 const allPosts = await Astro.glob("./posts/*.md");
-const tags = ["TQGX", "SOFTWARE", "⚡ QUICK READ"];
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 const posts = [];
 
 tags.forEach((tag) => { 
